@@ -47,7 +47,7 @@ body, html{
     box-sizing: border-box;
     padding: 16px;
     display: flex;
-    max-width: 1200px;
+    max-width: 1340px;
     margin: auto;
 }
 
@@ -60,6 +60,7 @@ body, html{
     margin-top: calc((100vh + -300px)/2);
     z-index: 100;
     list-style-type: none;
+    padding-inline-start: 80px;
 }
 
 .navigation-item:not(:last-child) {
@@ -79,18 +80,35 @@ body, html{
     width: 100%;
     flex-direction: column;
     margin-top: calc((100vh + -300px)/2);
-    padding-left: 20%;
+    margin-bottom: calc((100vh + -900px)/2);
+    padding-left: 15%;
     list-style-type: none;
 }
 
 .card {
+    margin-bottom: 80px;
+    width: 740px;
+}
+
+.cover {
     width: 740px;
     height: 400px;
-    background-color: blanchedalmond;
-    border-radius: 24px;
-    overflow: hidden;
     position: relative;
-    margin-bottom: 80px;
+    overflow: hidden;
+    border-radius: 24px;
+    background-color: blanchedalmond;
+    box-sizing: border-box;
+}
+
+.cover-img
+{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-link {
+    text-decoration: none;
 }
 
 .cardtitle {
@@ -107,17 +125,15 @@ body, html{
     color: white;
     left: 20px;
     bottom: 20px;
-    display: none;
+    /*display: none;*/
+    opacity: 0;
 }
 
 .card:hover .ext-arrow{
-    display:block;
-}
-
-.cover {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
+    /*display:block;*/
+    opacity: 1;
+    transition: opacity .3s;
+    transition-timing-function: ease-in-out;
 }
 
 .logo {
@@ -179,16 +195,11 @@ body, html{
     transition: border-bottom 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* .link:active {
-    border-bottom: 2px solid rgba(0, 0, 0, 1);
-} */
-
 .link.active {
     border-bottom: 2px solid rgba(0, 0, 0, 1);
 }
 
 .icon-link {
-    text-decoration: none;
     color: black;
     text-decoration: none;
     z-index: 20;
@@ -205,10 +216,34 @@ body, html{
 }
 
 .big-text {
-    font-size: 120px;
-    margin-top: -20px;
+    font-size: 110px;
+    margin-top: -16px;
 }
 
+h3 {
+    font-size: 48px;
+    line-height: 100%;
+    font-weight: 400;
+    margin: 20px 0 8px 0;
+    text-decoration: none;
+    color: black;
+}
+
+.portfolio-link:hover h3 {
+ color: rgba(0, 0, 0, 0.7);
+}
+
+.smalltext {
+    font-size: 12px;
+    line-height: 100%;
+    color: black;
+}
+
+/*.portfolio-link:hover .cover {
+    transform: scale(1.06);
+    transition: transform .4s,-webkit-transform .4s,-moz-transform .4s,-o-transform .4s;
+    transition-timing-function: cubic-bezier(.02,.75,.13,.89);
+}*/
 
 /*.card:hover {
     transform: scale(.97);
