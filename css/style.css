@@ -144,7 +144,7 @@ body, html{
     box-sizing: border-box;
 }
 
-@media (min-width: 1560px) {
+@media (min-width: 1600px) {
     .cover {
         width: 900px;
         height: 480px;
