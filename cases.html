@@ -23,6 +23,38 @@
         </a>
         <a href="#" class="email link">ilishbeats@gmail.com</a>
     </header>
+
+    <div class="header-mob" data-dropdown-menu="parent">
+        <div class="row">  
+            <a href="/index.html" class="logo-mob">
+                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1H33V33H1V1Z" stroke="black" stroke-width="2" stroke-linejoin="bevel"/>
+                <path d="M23 15L11 27V19L23 7V15Z" stroke="black" stroke-width="2" stroke-linejoin="bevel"/>
+                </svg>
+            </a>
+            <div class="nav-mob" data-dropdown-menu="btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                    <path d="M0 11H34V13H0V11Z" fill="black"/>
+                    <path d="M8 21H34V23H8V21Z" fill="black"/>
+                </svg>
+            </div>
+        </div>
+        <div class="column hide" data-dropdown-menu="item">
+            <a href="">Кейсы</a>
+            <a href="">Подход</a>
+            <a href="">О себе</a>
+        </div>
+
+        <div class="column hide" data-dropdown-menu="item">
+            <a href="">ilishbeats@gmail.com</a>
+            <a href="">Behance</a>
+            <a href="">Резюме</a>
+            <a href="">Телеграм</a>
+        </div>
+
+
+    </div>
+
     <div  class="container">
         <ul class="navigation">
             <li class="navigation-item">
@@ -35,6 +67,11 @@
                 <a href="#" class="link">О себе</a>
             </li>
         </ul>
+
+        <div class="heading">
+            <h1>Кейсы</h1>
+        </div>
+
         <ul class="cardslist">
             <li class="card" data-aos="fade" data-aos-delay="50" data-aos-duration="1000">
                 <a href="#" class="portfolio-link">
@@ -182,13 +219,7 @@
     
 <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>  
 <script type="text/javascript" src="/js/tilt.jquery.min.js"></script>
-<script type="text/javascript">
-   $(document).ready(function(){
-        $('.cover').tilt({
-    scale: 1.05
-        })
-    }) 
-</script>
+<script type="text/javascript" src="/js/script.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init();
