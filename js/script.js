@@ -1,22 +1,22 @@
-// $(document).ready(function(){
-// 	$('.cover').tilt({
-// scale: 1.05
-// 	})
-// })
+$(document).ready(function(){
+	$('.cover').tilt({
+scale: 1.05
+	})
+})
 
-// var header = $('.header-mob'),
-// scrollPrev = 0;
+var header = $('.header-mob'),
+scrollPrev = 0;
 
-// $(window).scroll(function() {
-// 	var scrolled = $(window).scrollTop();
+$(window).scroll(function() {
+	var scrolled = $(window).scrollTop();
 
-// 	if ( scrolled > 100 && scrolled > scrollPrev ) {
-// 		header.addClass('out');
-// 	} else {
-// 		header.removeClass('out');
-// 	}
-// 	scrollPrev = scrolled;
-// })
+	if ( scrolled > 100 && scrolled > scrollPrev ) {
+		header.addClass('out');
+	} else {
+		header.removeClass('out');
+	}
+	scrollPrev = scrolled;
+})
 
 //Ниже скрипт для открытия мобильно меню//
 
@@ -31,20 +31,13 @@ const initMenu = () => {
 			btn.classList.toggle('open')
 			menu.classList.toggle('open');
 			menu.style.transition = 'max-height 0.3s';
-			
 
 			if (menu.classList.contains('open')) {
-				menu.style.maxHeight = '100%';
+				menu.style.maxHeight = menu.scrollHeight + 'px';
 			} else {
 				menu.style.maxHeight = '0';
 			}
-		}
-
-		const hideMenu = () => {
-			btn.classList.remove('open')
-			menu.classList.remove('open')
-			menu.style.maxHeight = '0'
-		}
+		};
 
 		btn.addEventListener('click', openMenu)
 	}
