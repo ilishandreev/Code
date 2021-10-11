@@ -98,7 +98,7 @@ body, html{
     }
 }
 .header-mob.out {
-	transform: translateY(-66px);
+	transform: translateY(-120%);
 }
 
 .nav-mob {
@@ -435,21 +435,15 @@ h3 {
 }
 
 .menu {
-    /* max-height: 100%; */
+    max-height: 0;
     overflow: hidden;
-
-    /* transition-property: max-height;
-    transition-duration: .3s; */
-    
-}
-
-.wrapper-menu {
-    
+    transition: max-height .3s;
 }
 
 .menu.open {
-    /* max-height: 100%; */
+    max-height: 100%;
 }
+
 /*.portfolio-link:hover .cover {
     transform: scale(1.06);
     transition: transform .4s,-webkit-transform .4s,-moz-transform .4s,-o-transform .4s;
