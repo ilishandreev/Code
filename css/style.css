@@ -391,7 +391,7 @@ h1 {
     font-weight: 400;
     margin: 0 0 8px 0;
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 h3 {
@@ -434,10 +434,22 @@ h3 {
     justify-content: space-between;
 }
 
-.hide {
-    display: none;
+.menu {
+    /* max-height: 100%; */
+    overflow: hidden;
+
+    /* transition-property: max-height;
+    transition-duration: .3s; */
+    
 }
 
+.wrapper-menu {
+    
+}
+
+.menu.open {
+    /* max-height: 100%; */
+}
 /*.portfolio-link:hover .cover {
     transform: scale(1.06);
     transition: transform .4s,-webkit-transform .4s,-moz-transform .4s,-o-transform .4s;
