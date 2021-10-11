@@ -2,7 +2,7 @@ body, html{
     padding:0px;
     margin:0;
     box-sizing: border-box;
-    font-family: TT Travels, Arial, Helvetica, sans-serif;
+    font-family: TT Travels, Inter, Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-weight: 500;
 }

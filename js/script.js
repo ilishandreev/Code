@@ -18,7 +18,7 @@ $(window).scroll(function() {
 	scrollPrev = scrolled;
 })
 
-//Ниже скрипт для открытия мобильно меню//
+//Ниже скрипт для открытия мобильного меню//
 
 const initMenu = () => {
 
@@ -27,6 +27,16 @@ const initMenu = () => {
 		const btn = parent.querySelector('[data-dropdown-menu="btn"]')
 		const menu = parent.querySelector('[data-dropdown-menu="menu"]')
 		
+		const clickOut = (evt) => { //evt — сокращение от event
+			const target = evt.target;
+			const isMenu = target.contains(menu)
+
+			if (isMenu) {
+				menu.classList.remove('open');
+				btn.classList.remove('open')		
+			}
+		}
+		
 		const openMenu = () => {
 			btn.classList.toggle('open')
 			menu.classList.toggle('open');
@@ -34,6 +44,9 @@ const initMenu = () => {
 
 			if (menu.classList.contains('open')) {
 				menu.style.maxHeight = menu.scrollHeight + 'px';
+				setTimeout(()=> {
+					document.addEventListener('click', clickOut);
+				},0)				
 			} else {
 				menu.style.maxHeight = '0';
 			}
@@ -41,6 +54,7 @@ const initMenu = () => {
 
 		btn.addEventListener('click', openMenu)
 	}
-  };
+
+};
 
 initMenu(); //вызов функции 
