@@ -22,24 +22,47 @@ $(window).scroll(function() {
 
 const initMenu = () => {
 
-  const parent = document.querySelector('[data-dropdown-menu="parent"]')
+  const parent = document.querySelector('[data-dropdown-menu="parent"]');
 	if (parent) {
-		const btn = parent.querySelector('[data-dropdown-menu="btn"]')
-		const menu = parent.querySelector('[data-dropdown-menu="menu"]')
-		
-		const openMenu = () => {
-			btn.classList.toggle('open')
-			menu.classList.toggle('open');
-			menu.style.transition = 'max-height 0.3s';
+		const btn = parent.querySelector('[data-dropdown-menu="btn"]');
+		const menu = parent.querySelector('[data-dropdown-menu="menu"]');
 
-			if (menu.classList.contains('open')) {
-				menu.style.maxHeight = menu.scrollHeight + 'px';
-			} else {
-				menu.style.maxHeight = '0';
+		const closeMenu = () => {
+			btn.classList.remove('open');
+			menu.classList.remove('open');
+			menu.style.maxHeight = '0';
+			document.removeEventListener('click', isClickOutside);
+		}
+
+		const openMenu = () => {
+			btn.classList.add('open');
+			menu.classList.add('open');
+			menu.style.maxHeight = menu.scrollHeight + 'px';
+			setTimeout(() => {
+				document.addEventListener('click', isClickOutside);
+			}, 0)
+		};
+
+		const isClickOutside = (evt) => {
+			const target = evt.target;
+			const itsParent = target == parent || parent.contains(target);
+			const itsBtn = target === btn;
+			const menuIsActive = menu.classList.contains('open');
+
+			if (!itsParent && !itsBtn && menuIsActive) {
+			  closeMenu();
 			}
 		};
 
-		btn.addEventListener('click', openMenu)
+		const isMenu = () => {
+			if (menu.classList.contains('open')) {
+				closeMenu();
+			} else {
+				openMenu();
+			}
+		}
+
+		btn.addEventListener('click', isMenu)
 	}
   };
 
