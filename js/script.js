@@ -18,22 +18,26 @@ $(window).scroll(function() {
 	scrollPrev = scrolled;
 })
 
-//Ниже скрипт для открытия мобильно меню//
+//Ниже скрипт для открытия мобильного меню//
 
 const initMenu = () => {
 
   const parent = document.querySelector('[data-dropdown-menu="parent"]');
 	if (parent) {
-		const btn = parent.querySelector('[data-dropdown-menu="btn"]');
-		const menu = parent.querySelector('[data-dropdown-menu="menu"]');
 
-		const closeMenu = () => {
-			btn.classList.remove('open');
-			menu.classList.remove('open');
-			menu.style.maxHeight = '0';
-			document.removeEventListener('click', isClickOutside);
+		const btn = parent.querySelector('[data-dropdown-menu="btn"]')
+		const menu = parent.querySelector('[data-dropdown-menu="menu"]')
+		
+		const clickOut = (evt) => { //evt — сокращение от event
+			const target = evt.target;
+			const isMenu = target.contains(menu)
+
+			if (isMenu) {
+				menu.classList.remove('open');
+				btn.classList.remove('open')		
+			}
 		}
-
+		
 		const openMenu = () => {
 			btn.classList.add('open');
 			menu.classList.add('open');
@@ -56,7 +60,7 @@ const initMenu = () => {
 
 		const isMenu = () => {
 			if (menu.classList.contains('open')) {
-				closeMenu();
+				closeMenu();			
 			} else {
 				openMenu();
 			}
@@ -64,6 +68,7 @@ const initMenu = () => {
 
 		btn.addEventListener('click', isMenu)
 	}
-  };
+
+};
 
 initMenu(); //вызов функции 
