@@ -1,3 +1,23 @@
+
+@font-face {
+    font-family: 'TT Travels';
+    src: url('/fonts/TTTravels-Medium.woff2') format('woff2'),
+        url('/fonts/TTTravels-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TT Travels';
+    src: url('/fonts/TTTravels-Regular.woff2') format('woff2'),
+        url('/fonts/TTTravels-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 body, html{
     padding:0px;
     margin:0;
@@ -314,6 +334,7 @@ footer {
 .icontext {
     display: flex;
     align-items: flex-start;
+
 }
 
 .icon {
@@ -325,6 +346,18 @@ footer {
     align-items: center;
     justify-content: center;
     margin-right: 4px;
+}
+
+.icon-dl-mob {
+    width: 39px;
+    height: 39px;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+    margin-left: -6px;
 }
 
 .behance {
@@ -342,6 +375,11 @@ footer {
     text-decoration: none;
     z-index: 20;
     border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+
+.link-mob {
+    font-size: 32px;
+    font-weight: 500;
 }
 
 .link:hover {
@@ -437,13 +475,22 @@ h3 {
 .menu {
     max-height: 0;
     overflow: hidden;
-    transition: max-height .3s;
+    transition: max-height .5s;
+    transition-timing-function: cubic-bezier(0.7, 0.01, 0.4, 0.99);
+    width: 100%;
 }
 
 .menu.open {
     max-height: 100%;
 }
 
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
 /*.portfolio-link:hover .cover {
     transform: scale(1.06);
     transition: transform .4s,-webkit-transform .4s,-moz-transform .4s,-o-transform .4s;
