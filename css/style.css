@@ -1,8 +1,6 @@
-
 @font-face {
     font-family: 'TT Travels';
-    src: url('/fonts/TTTravels-Medium.woff2') format('woff2'),
-        url('/fonts/TTTravels-Medium.woff') format('woff');
+    src: url('/fonts/TTTravels-Medium.woff2') format('woff2'), url('/fonts/TTTravels-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -10,19 +8,18 @@
 
 @font-face {
     font-family: 'TT Travels';
-    src: url('/fonts/TTTravels-Regular.woff2') format('woff2'),
-        url('/fonts/TTTravels-Regular.woff') format('woff');
+    src: url('/fonts/TTTravels-Regular.woff2') format('woff2'), url('/fonts/TTTravels-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
-
-body, html{
-    padding:0px;
-    margin:0;
+body,
+html {
+    padding: 0px;
+    margin: 0;
     box-sizing: border-box;
-    font-family: TT Travels, Inter, Helvetica, Arial, sans-serif;
+    font-family: TT Hoves, TT Travels, Inter, Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-weight: 500;
 }
@@ -78,7 +75,6 @@ body, html{
     position: fixed;
     bottom: 0px;
     z-index: 999;
-
 }
 
 @media (max-width: 640px) {
@@ -117,17 +113,16 @@ body, html{
         display: none;
     }
 }
+
 .header-mob.out {
-	transform: translateY(-120%);
+    transform: translateY(-120%);
 }
 
 .nav-mob {
     display: flex;
 }
 
-footer {
-
-}
+footer {}
 
 @media (max-width:640px) {
     footer {
@@ -178,7 +173,7 @@ footer {
     overflow: hidden;
 }
 
-.cardslist{
+.cardslist {
     z-index: 10;
     box-sizing: border-box;
     display: flex;
@@ -253,8 +248,7 @@ footer {
     }
 }
 
-.cover-img
-{
+.cover-img {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -282,7 +276,7 @@ footer {
     opacity: 0;
 }
 
-.card:hover .ext-arrow{
+.card:hover .ext-arrow {
     /*display:block;*/
     opacity: 1;
     transition: opacity .3s;
@@ -334,7 +328,6 @@ footer {
 .icontext {
     display: flex;
     align-items: flex-start;
-
 }
 
 .icon {
@@ -365,9 +358,9 @@ footer {
 }
 
 .tg {
-   position: fixed;
-   bottom: 40px;
-   right: 48px;
+    position: fixed;
+    bottom: 40px;
+    right: 48px;
 }
 
 .link {
@@ -404,7 +397,7 @@ footer {
 
 .download {
     background: url(/icons/download-icon.svg) no-repeat 0 5px;
-    padding-left: 15px;    
+    padding-left: 15px;
 }
 
 .big-text {
@@ -449,7 +442,7 @@ h3 {
 }
 
 .portfolio-link:hover h3 {
- color: rgba(0, 0, 0, 0.7);
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .smalltext {
@@ -491,11 +484,14 @@ h3 {
 .mt-10 {
     margin-top: 10px;
 }
+
+
 /*.portfolio-link:hover .cover {
     transform: scale(1.06);
     transition: transform .4s,-webkit-transform .4s,-moz-transform .4s,-o-transform .4s;
     transition-timing-function: cubic-bezier(.02,.75,.13,.89);
 }*/
+
 
 /*.card:hover {
     transform: scale(.97);
