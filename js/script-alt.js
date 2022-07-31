@@ -1,3 +1,4 @@
+// Card cover scale
 $(document).ready(function() {
     $('.cover').tilt({
         scale: 1.02
@@ -66,10 +67,12 @@ const initMenu = () => {
     }
 };
 
-initMenu(); //вызов функции 
+initMenu(); //вызов функции
 
 
-// magnetic
+
+// Magnetic Buttons
+// Found via: https://codepen.io/tdesero/pen/RmoxQg
 var magnets = document.querySelectorAll('.magnetic')
 var strength = 50
 
@@ -91,3 +94,6 @@ function moveMagnet(event) {
         y: (((event.clientY - bounding.top) / magnetButton.offsetHeight) - 0.5) * strength,
         ease: Power4.easeOut
     })
+
+    //magnetButton.style.transform = 'translate(' + (((( event.clientX - bounding.left)/(magnetButton.offsetWidth))) - 0.5) * strength + 'px,'+ (((( event.clientY - bounding.top)/(magnetButton.offsetHeight))) - 0.5) * strength + 'px)';
+}

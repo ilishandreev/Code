@@ -1,0 +1,420 @@
+body {
+    font-family: 'TT Hoves', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    background-color: #E9EBF0;
+}
+
+.header-mob {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% + -16px);
+    transition: all .3s ease;
+    display: flex;
+    padding: 12px;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    background: white;
+    border-radius: 12px;
+    margin: 8px;
+    z-index: 20;
+    flex-direction: column;
+}
+
+.header-mob.out {
+    transform: translateY(-120%);
+}
+
+.nav-mob {
+    width: 34px;
+    height: 34px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.content {
+    z-index: 2;
+    /* padding-left: 10vw; */
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    max-width: 990px;
+    margin: auto;
+}
+
+
+/* Page BG */
+
+.page-cover {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(114, 114, 114, 0);
+    z-index: -999;
+}
+
+h1 {
+    font-size: 128px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+}
+
+h3 {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.fix-t {
+    position: fixed;
+    top: 20px;
+}
+
+.fix-l {
+    position: fixed;
+    left: 20px;
+}
+
+.fix-b {
+    position: fixed;
+    bottom: 20px;
+}
+
+.fix-r {
+    position: fixed;
+    right: 20px;
+}
+
+.rbtn {
+    box-sizing: border-box;
+    min-width: 120px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 20px;
+    gap: 8px;
+    line-height: 22px;
+}
+
+.active-link {
+    color: #FFF !important;
+    background-color: #000 !important;
+}
+
+.active-link svg {
+    fill: #fff;
+}
+
+.rbtn:hover {
+    color: #FFF;
+    background-color: #000;
+    transition: 0.5s background-color;
+}
+
+.rbtn-m {
+    box-sizing: border-box;
+    background-color: #E9EBF0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 20px;
+    gap: 8px;
+    line-height: 22px;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+}
+
+.rbtn:hover svg {
+    fill: #fff;
+}
+
+.logo {
+    box-sizing: border-box;
+    background-color: white;
+    padding: 16px 24px 18px 24px;
+    max-width: 164px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo:hover {
+    color: #FFF;
+    background-color: #000;
+    transition: 0.5s background-color;
+}
+
+.logo-name {
+    width: 100%;
+    line-height: 22px;
+}
+
+.logo-desc {
+    width: 100%;
+    opacity: .3;
+    line-height: 22px;
+}
+
+.r-c-12 {
+    border-radius: 12px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mb-8 {
+    margin-bottom: 8px;
+}
+
+.menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s;
+    transition-timing-function: cubic-bezier(0.7, 0.01, 0.4, 0.99);
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    gap: 8px;
+}
+
+.menu.open {
+    max-height: 100%;
+}
+
+
+/* Карточки */
+
+.cardslist {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+@media (max-width: 640px) {
+    .cardslist {
+        margin-top: 0;
+        margin-bottom: 64px;
+        padding: 0px;
+    }
+}
+
+.card {
+    margin-bottom: 80px;
+    width: 970px;
+}
+
+@media (max-width: 640px) {
+    .card {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+.cover {
+    max-width: 970px;
+    height: auto;
+    overflow: hidden;
+    border-radius: 24px;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.cover-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio-link {
+    text-decoration: none;
+}
+
+.cardtitle {
+    font-size: 40px;
+    position: absolute;
+    color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ext-icon {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 12px;
+    background-color: white;
+    opacity: 0;
+    border-radius: 12px;
+}
+
+.card:hover .ext-icon {
+    /*display:block;*/
+    opacity: 1;
+    transition: opacity .3s;
+    transition-timing-function: ease-in-out;
+}
+
+ul {
+    padding-inline-start: 0;
+}
+
+
+/* Конец--Карточки */
+
+
+/* Цвета карточек */
+
+.yroom {
+    background-color: white;
+}
+
+.r-roc {
+    background-color: rgb(255, 255, 255);
+}
+
+.g-ev {
+    background-color: rgb(0, 0, 0);
+}
+
+.chip {
+    width: fit-content;
+    padding: 10px 16px;
+    font-size: 14px;
+    line-height: 100%;
+    background-color: #B8FE4E;
+    border-radius: 24px;
+}
+
+.card-title {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+@media (max-width: 1439px) {
+    h1 {
+        font-size: 112px;
+    }
+    .content {
+        max-width: 860px;
+        padding-left: 2vw;
+    }
+}
+
+@media(min-width: 1279px) {
+    .header-mob {
+        display: none;
+    }
+}
+
+@media (max-width: 1279px) {
+    header {
+        display: none;
+    }
+    footer {
+        display: none;
+    }
+    .logo {
+        padding: 0;
+    }
+    .header-mob {
+        padding: 16px;
+    }
+    .content {
+        max-width: 768px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (min-width:1280px) {
+    .cases-heading {
+        display: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    h1 {
+        font-size: 40px;
+    }
+    h3 {
+        font-size: 28px;
+    }
+    .chip {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+    .content {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 12vh;
+    }
+    .ext-icon {
+        opacity: 1;
+        border-radius: 10px;
+    }
+    .cover {
+        border-radius: 12px;
+    }
+}
+
+
+/* magnetic */
+
+.magnetic {
+    margin: -20px;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    /*border: 1px solid #000; //use this for debugging*/
+}
+
+#magnet-button {
+    display: inline-block;
+}
