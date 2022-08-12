@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+</head>
+
+<body>
+    <div class="bgwrapper">
+        <div class="bgrect"></div>
+    </div>
+    <div class="filltop"></div>
+    <div class="fillbottom"></div>
+    <header>
+        <a href="/index.html" class="logo">
+            <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1H33V33H1V1Z" stroke="black" stroke-width="2" stroke-linejoin="bevel"/>
+        <path d="M23 15L11 27V19L23 7V15Z" stroke="black" stroke-width="2" stroke-linejoin="bevel"/>
+        </svg>
+        </a>
+        <a href="#" class="email link">ilishbeats@gmail.com</a>
+    </header>
+
+
+    <div class="container">
+        <ul class="navigation">
+            <li class="navigation-item">
+                <a href="/cases.html" class="link">Кейсы</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#" class="link">Подход</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#" class="link">О себе</a>
+            </li>
+        </ul>
+        <div class="cardslist">
+            <div class="big-text">
+                UX/UI Дизайнер <br> Илья Андреев.<br> Портфолио
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="linksleft">
+            <a href="#" class="behance link">Behance</a>
+            <a href="#" class="icon-link">
+                <div class="icontext">
+                    <div class="icon">
+                        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 15.5L6.41351 15.9675H7.58649L7 15.5ZM7.75 15.5V0H6.25V15.5H7.75ZM7.58649 15.0325C5.80603 12.7988 3.91415 11.3339 1.30574 10.1694L0.694262 11.5391C3.0834 12.6057 4.78272 13.9215 6.41351 15.9675L7.58649 15.0325ZM12.6943 10.1694C10.0859 11.3339 8.19397 12.7988 6.41351 15.0325L7.58649 15.9675C9.21728 13.9215 10.9166 12.6057 13.3057 11.5391L12.6943 10.1694Z" fill="black"/>
+                        </svg>
+                    </div>
+                    <div class="link">Резюме</div>
+                </div>
+            </a>
+        </div>
+
+        <a href="#" class="tg link">Телеграм</a>
+    </footer>
+
+    <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="/js/tilt.jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.card').tilt({
+                scale: 1.08
+            })
+        })
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

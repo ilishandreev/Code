@@ -200,6 +200,10 @@ a {
     margin-bottom: 8px;
 }
 
+.mb-20 {
+    margin-bottom: 20px;
+}
+
 .menu {
     max-height: 0;
     overflow: hidden;

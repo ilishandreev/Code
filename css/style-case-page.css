@@ -1,0 +1,76 @@
+.case-info {
+    display: flex;
+    gap: 8px;
+}
+
+.h1-case {
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+}
+
+.case-heading {
+    margin-bottom: 120px;
+    max-width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.big-p {
+    font-size: 24px;
+    line-height: 160%;
+}
+
+.case-about {
+    margin-bottom: 120px;
+    max-width: 990px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.case-content {
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+.case-decor {
+    width: 100%;
+    height: auto;
+    margin-bottom: 120px;
+}
+
+.case-screenshot {
+    width: 1200px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 120px;
+}
+
+.img-scr {
+    width: 100%;
+    height: auto;
+}
+
+.case-text {
+    margin-bottom: 120px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-line {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 40px;
+}
+
+.text-col-l {
+    width: 30%;
+}
+
+.text-col-r {
+    max-width: 70%;
+}
