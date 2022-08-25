@@ -99,8 +99,8 @@ function moveMagnet(event) {
 }
 
 
-// Barba
+// // Barba
 
-barba.init({
-    // ...
-})
+// barba.init({
+//     // ...
+// })
